@@ -309,10 +309,8 @@ void writefile (char *fileName, Book *list)
 {
   FILE *fd;
   Book *p=list;
-    printf ("%s\n", fileName);
   fd = fopen (fileName, "w");
     while (p != NULL) {
-        printf("%i,%s,%s,%s,%i\n", p->ISBN,p->Title,p->Author, p->Description, p->CopiesAtCSU);
         char line[100];
         sprintf(line, "%i,%s,%s,%s,%i\n", p->ISBN,p->Title,p->Author, p->Description, p->CopiesAtCSU);
         fprintf(fd, line);
